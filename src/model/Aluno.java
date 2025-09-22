@@ -2,9 +2,15 @@ package model;
 
 import java.util.Scanner;
 
-public class Calculadora {
-    double nota1, nota2, nota3, nota4, media;
-    String nomeAluno, resultado;
+public class Aluno {
+    double nota1;
+    double nota2;
+    double nota3;
+    double nota4;
+    double media;
+    String nomeAluno;
+    String resultado;
+    //utilizar variáveis em linhas separadas para poder se enquadrar no cleanCode
 
     public void obterDados(){
         Scanner leitor = new Scanner(System.in);
@@ -23,17 +29,21 @@ public class Calculadora {
         nota3 = leitor.nextDouble();
         System.out.print("Digite a quarta nota: ");
         nota4 = leitor.nextDouble();
+        System.out.println("------------------------------------");
 
+        //chamando as funções para prosseguir com o código
         calcularMedia();
         exibirResultados();
     }
 
     public void calcularMedia(){
 
+        // realiza o calculo de média
         double somaNotas = nota1 + nota2 + nota3 + nota4;
 
         media = somaNotas/4;
 
+        //verifica a situação do aluno
         if (media >= 5){
             resultado = "Aprovado(a)";
         }
