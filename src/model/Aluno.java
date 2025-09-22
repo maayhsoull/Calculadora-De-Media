@@ -46,9 +46,12 @@ public class Aluno {
         //verifica a situação do aluno
         if (media >= 5){
             resultado = "Aprovado(a)";
-        }
-        else {
+
+        } else if (media < 4 ) {
             resultado = "Reprovado(a)";
+
+        } else {
+            resultado = "Recuperação";
         }
     }
 
